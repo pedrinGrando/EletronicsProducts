@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/e-commerce(DevWEB)/CSS/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/e-commerce(DevWEB)/IMG/store.png" type="image/x-icon"> 
+    <script src="/e-commerce(DevWEB)/JS/javascript.js" defer></script>
+
+    <title>Store/Games</title>
+</head>
+
+<a href="/e-commerce(DevWEB)/pages/smartphones.html"></a>
+<body>
+    <header>
+        <h1>Peter's store  | <span id="nome-usuario">
+            <img src="/e-commerce(DevWEB)/IMG/store.png" alt="Peter'Store" id="img-nav-peter">
+        </span></h1>
+
+    <div class="search-bar">
+        <input placeholder="Search products..." type="text" id="search">
+        <button  id="btn-searchBar" onclick="filtrarProdutos()">Go</button>
+    </div>
+
+    <div class="categorias">
+      <button class="btn-catgoria" id="btn-smartfones">Smartphones</button>
+    </div>
+    <div class="categorias">
+      <button class="btn-catgoria" id="btn-games">Games</button>
+    </div>
+    <div class="categorias">
+      <button class="btn-catgoria" id="btn-notebook">Notebooks</button>
+    </div>
+
+        <nav id="items-container">
+            <ul class="lista-de-itens">
+                <li><a href="/e-commerce(DevWEB)/pages/index.html" class="item-link" id="home-page">
+                    <img src="/e-commerce(DevWEB)/IMG/home.png" alt="Home">
+                </a></li>
+                <li><a href="#produtos" class="item-link" id="produtosImg">
+                    <img src="/e-commerce(DevWEB)/IMG/new-product.png" alt="Products">
+                </a></li>
+                <li><a href="#carrinho" class="item-link">
+                    <img src="/e-commerce(DevWEB)/IMG/shopping-cart.png" alt="Cart">
+                </a></li>
+                <li id="contador-compras"><a href="#" class="item-link">
+                    <img src="" alt="">
+                </a></li>
+            </ul>
+            <div id="confirmationMessage">Added to cart<span class="checkmark">✓</span></div>
+        </nav>
+    </header>
+
+  <!--Teste realizado-->
+  <section class="marketing-section">
+    <div class="marketing-text">
+        <h1>Peter's Store</h1>
+        <p>Discover the latest in electronics at Peter's Store. We offer a wide range of high-quality gadgets, from smartphones and laptops to home entertainment systems. Our competitive prices and exceptional customer service make us your one-stop shop for all your tech needs.</p>
+    </div>
+    <div class="marketing-image">
+      <span id="span-prop">We have featured products today!</span>
+      <div class="product-container">
+        <div class="product-gallery">
+            <div class="product-image active">
+                <img src="/e-commerce(DevWEB)/IMG/ps5.jpg" alt="Product 1" class="exit-image">
+                <legend>PS5 512gb |<span class="preco-prop"> R$ 2890.90  <span id="promocao"> - 20% OFF</span></span></legend>
+            </div>
+            <div class="product-image">
+                <img src="/e-commerce(DevWEB)/IMG/macbook.jpg" alt="Product 2" class="exit-image">
+                <legend>Macbook 1TB |<span class="preco-prop"> R$ 6200.90  <span id="promocao"> - 15% OFF</span></span></legend>
+            </div>
+            <div class="product-image">
+                <img src="/e-commerce(DevWEB)/IMG/Iphone 13.jpg" alt="Product 3" class="exit-image">
+                <legend>Iphone 13 128gb |<span class="preco-prop"> R$ 4100.90 <span id="promocao"> - 30% OFF</span></span></legend>
+            </div>
+        </div>
+        <button class="next-button">➡️</button>
+    </div>
+</section>
+  <!--Produtos-->
+    <section class="produtos" id="produtos">
+        <!-- Listar produtos disponiveis -->
+         <!-- Produto 1 -->
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/ps5.jpg" alt="Produto 1">
+            <h2 class="elemento-para-acionar-modal">PlayStation 5 </h2> 
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 3800 <span class="product-promo">-50%</span></p>
+        
+
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+                <button type="submit" id="add-cart" onclick="adicionarCart()">
+                  <span>Add to cart</span>
+                  <span></span>
+              </button>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/Xbox.jpg" alt="Produto 2">
+            <h2>Xbox One S</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 3100</p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart2()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/Teclado razer.jpg" alt="Produto 3">
+            <h2>Hunstsman Mini</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 450.99</p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart3()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/Iphone 13.jpg" alt="Produto 1">
+            <h2>Iphone 13 128gb </h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 4500.99 <span class="product-promo">-30%</span></p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart4()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/Iphone14.jpg" alt="Produto 2">
+            <h2>Iphone 14 pro 256gb</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 5800.99</p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart5()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/notebookDell.jpg" alt="Produto 3">
+            <h2>Notebook Dell</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 2650.99</p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart6()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/Headset logitech.jpg" alt="Produto 3">
+            <h2>Headset logitech</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 560.99 <span class="product-promo">-45%</span></p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart7()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+
+        <div class="produto" id="produto-container">
+            <img src="/e-commerce(DevWEB)/IMG/mouse Hyperx.jpg" alt="Produto 3">
+            <h2>Mouse Hyperx</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 270.99</p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart8()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/macbook.jpg" alt="Produto 3">
+            <h2>Macbook</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 6100.90 <span class="product-promo">-15%</span></p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart9()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+              </button>
+        </div>
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/controlePs4.jpg" alt="Produto 3">
+            <h2>PS4 Controller</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 280.99</p>
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart10()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/AirPodsPro.jpg" alt="Produto 3">
+            <h2>AirPods Pro</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 800.90</p>
+             
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart11()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+        <div class="produto">
+            <img src="/e-commerce(DevWEB)/IMG/relogioCasio.jpg" alt="Produto 3">
+            <h2>Casio Watch</h2>
+            <span class="avaliacao">
+              <br>⭐⭐⭐⭐⭐</span>
+            <p>R$ 290.99 <span class="product-promo">-10%</span></p>
+             
+            <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+                <span>Buy</span>
+                <span></span>
+              </button>
+              <button type="submit" id="add-cart2" onclick="adicionarCart12()">
+                <span>Add to cart</span>
+                <span></span>
+              </button>
+        </div>
+        <div class="produto">
+          <img src="/e-commerce(DevWEB)/IMG/NinSwitch.jpg" alt="Produto 3">
+          <h2>Nintendo Switch</h2>
+          <span class="avaliacao">
+            <br>⭐⭐⭐⭐⭐</span>
+          <p>R$ 2950.99</p>
+
+          <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+              <span>Buy</span>
+              <span></span>
+            </button>
+            <button type="submit" id="add-cart2" onclick="adicionarCart13()">
+              <span>Add to cart</span>
+              <span></span>
+            </button>
+      </div>
+      <div class="produto">
+        <img src="/e-commerce(DevWEB)/IMG/S21 ultra.jpg" alt="Produto 3">
+        <h2>Galaxy S21 Ultra</h2>
+        <span class="avaliacao">
+          <br>⭐⭐⭐⭐⭐</span>
+        <p>R$ 3780.99</p>
+         
+        <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+            <span>Buy</span>
+            <span></span>
+          </button>
+          <button type="submit" id="add-cart2" onclick="adicionarCart14()">
+            <span>Add to cart</span>
+            <span></span>
+          </button>
+    </div>
+    <div class="produto">
+      <img src="/e-commerce(DevWEB)/IMG/controlePs5.jpg" alt="Produto 3">
+      <h2>PS5 Blue Controller</h2>
+      <span class="avaliacao">
+        <br>⭐⭐⭐⭐⭐</span>
+      <p>R$ 305.99 <span class="product-promo">-15%</span></p>
+      <button type="submit" class="animated-button" id="btn-buy" onclick="comprar()">
+          <span>Buy</span>
+          <span></span>
+        </button>
+        <button type="submit" id="add-cart2" onclick="adicionarCart15()">
+          <span>Add to cart</span>
+          <span></span>
+        </button>
+  </div>
+
+    </section>
+
+    <section id="carrinho">
+      <h2>Your Cart</h2>
+      <ul class="lista-de-produtos">
+          <li>
+              <img src="produto1.jpg" alt="">
+              <div class="info-produto">
+                  <h3></h3>
+                  <p></p>
+                  <p></p>
+              </div>
+              <button class="remover-produto">Remove</button>
+          </li>
+          <li>
+              <img src="produto2.jpg" alt="">
+              <div class="info-produto">
+                  <h3></h3>
+                  <p></p>
+                  <p></p>
+              </div>
+              <button class="remover-produto">Remove</button>
+          </li>
+          <!-- Adicione mais produtos aqui -->
+      </ul>
+      <div class="total-carrinho">
+          <p></p>
+      </div>
+      <button class="finalizar-compra">Finish purchase</button>
+  </section>
+
+    <footer>
+        <p>&copy; 2023 Peter's store </p>
+    </footer>
+
+</body>
+</html>
